@@ -76,7 +76,7 @@ def scan_port():
 			s.connect((arguments.ip,port))
 			open_ports.append(port)
 			if arguments.verbose:
-				print(f"\r{open_ports}",end="")
+				print(f"\rDiscovered open port {open_ports}",end="")
 		except (ConnectionRefusedError,socket.timeout):
 			continue
 		except StopIteration:
